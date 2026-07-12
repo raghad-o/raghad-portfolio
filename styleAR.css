@@ -1,0 +1,293 @@
+:root {
+    --bg-color: #0f172a;
+    --header-color: #0d1525;
+    --card-color: #1e293b;
+    --primary-color: #89c2e8;
+    --secondary-color: #d6ebfa;
+    --text-color: #f8fafc;
+    --muted-color: #cbd5e1;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cairo", Arial, sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    background-color: var(--header-color);
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    order: 1;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+nav ul {
+    order: 2;
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Sections */
+section {
+    padding: 80px 10%;
+    scroll-margin-top: 100px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+/* Home */
+.intro {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.intro-content {
+    max-width: 700px;
+}
+
+.intro h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.intro h2 {
+    color: var(--primary-color);
+    font-size: 30px;
+}
+
+.intro p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--muted-color);
+}
+
+/* About */
+.about-text {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    color: var(--muted-color);
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skills span {
+    background-color: var(--card-color);
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+/* Projects */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-color);
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.project-card p {
+    color: var(--muted-color);
+    margin: 20px 0;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Dashboard Images */
+.project-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+.project-image-grid img {
+     width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Pharmacy Images */
+.pharmacy-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.pharmacy-images img {
+    width: 100%;
+    aspect-ratio: 8 / 5;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Links */
+.project-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+.github-text {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--muted-color);
+}
+
+.github-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.github-text a:hover {
+    text-decoration: underline;
+}
+
+/* Education */
+.education-card {
+    background-color: var(--card-color);
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.education-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 7px;
+}
+
+/* Certificates */
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.certificate-card {
+    background-color: var(--card-color);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.certificate-card h3 {
+    color: var(--primary-color);
+}
+
+/* Contact */
+#contact {
+    text-align: center;
+}
+
+.contact-links {
+    margin-top: 30px;
+}
+
+.contact-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .intro h1 {
+        font-size: 40px;
+    }
+
+    .pharmacy-images {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
