@@ -171,7 +171,6 @@ section {
      width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: contain;
-    background-color: white;
     border-radius: 10px;
 }
 
